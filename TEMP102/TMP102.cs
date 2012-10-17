@@ -66,6 +66,8 @@ namespace TEMP102
                 dTemperature = double.Parse(line, CultureInfo.InvariantCulture);           
                 listdTemperature.Add(dTemperature);
                 label4Std.Text = Convert.ToString(listdTemperature.StandardDeviation());
+
+                //comment
             }
 
             catch (Exception ex)
