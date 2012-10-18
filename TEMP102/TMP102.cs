@@ -71,11 +71,12 @@ namespace TEMP102
             {
                 DateTime dtStart = DateTime.Now;
 
-                label1.Text = line;                 //receives line with point 21.45 to make it to double one needs to use
+                //label1.Text = line;                 //receives line with point 21.45 to make it to double one needs to use
                                                     //CultureInfo.InvariantCulture
                 dTemperature = double.Parse(line, CultureInfo.InvariantCulture);
                 dTemperatureRound = Math.Round(dTemperature, 3);
-               
+
+                label1.Text = Convert.ToString(dTemperatureRound);
                
 
                 chart1.Series[0].BorderWidth = 2;
@@ -102,7 +103,7 @@ namespace TEMP102
                 //string format = "MMM ddd d HH:mm yyyy";
                 string format = "yyyyMMddHHmmssffff";
 
-                label2.Text = time.ToString(format);
+                //label2.Text = time.ToString(format);
 
                 i++;
 

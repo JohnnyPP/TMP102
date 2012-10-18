@@ -75,18 +75,18 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 81);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 13);
+            this.label2.Size = new System.Drawing.Size(81, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Temperatur [C]";
+            this.label2.Text = "Temperatur [°C]";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(15, 128);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 13);
+            this.label3.Size = new System.Drawing.Size(134, 13);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Standard abweichung [C]:";
+            this.label3.Text = "Standard abweichung [°C]:";
             // 
             // label4Std
             // 
@@ -100,15 +100,17 @@
             // chart1
             // 
             chartArea1.AxisX.Title = "Zeit [s]";
-            chartArea1.AxisY.Title = "Temperatur [C]";
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            chartArea1.AxisY.Title = "Temperatur [°C]";
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
-            this.chart1.Location = new System.Drawing.Point(239, 41);
+            this.chart1.Location = new System.Drawing.Point(249, 12);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(559, 300);
+            this.chart1.Size = new System.Drawing.Size(697, 374);
             this.chart1.TabIndex = 5;
             this.chart1.Text = "chart1";
             // 
@@ -116,7 +118,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 398);
+            this.ClientSize = new System.Drawing.Size(958, 398);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.label4Std);
             this.Controls.Add(this.label3);
