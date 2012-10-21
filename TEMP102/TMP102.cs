@@ -86,6 +86,11 @@ namespace TEMP102
                 listdTimespent.Add(i);
                 listdTemperature.Add(dTemperatureRound);
                 label4Std.Text = Convert.ToString(Math.Round(listdTemperature.StandardDeviation(),4));
+                label5Mittel.Text = Convert.ToString(Math.Round(listdTemperature.Mean(),4));
+                label6Zentral.Text = Convert.ToString(Math.Round(listdTemperature.Median(),4));
+
+                
+       
 
                 chart1.Series[0].Points.AddXY(tsTimespent.TotalSeconds, dTemperatureRound);
                 //chart1.Series[0].Points.AddXY(i, dTemperatureRound);
