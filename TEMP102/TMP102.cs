@@ -74,7 +74,7 @@ namespace TEMP102
                 //label1.Text = line;                 //receives line with point 21.45 to make it to double one needs to use
                                                     //CultureInfo.InvariantCulture
                 dTemperature = double.Parse(line, CultureInfo.InvariantCulture);
-                dTemperatureRound = Math.Round(dTemperature, 3);
+                dTemperatureRound = Math.Round(dTemperature, 4);
 
                 label1.Text = Convert.ToString(dTemperatureRound);
                
@@ -85,7 +85,7 @@ namespace TEMP102
                 tsTimespent = DateTime.Now - dtStarttime;
                 listdTimespent.Add(i);
                 listdTemperature.Add(dTemperatureRound);
-                label4Std.Text = Convert.ToString(listdTemperature.StandardDeviation());
+                label4Std.Text = Convert.ToString(Math.Round(listdTemperature.StandardDeviation(),4));
 
                 chart1.Series[0].Points.AddXY(tsTimespent.TotalSeconds, dTemperatureRound);
                 //chart1.Series[0].Points.AddXY(i, dTemperatureRound);
