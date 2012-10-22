@@ -11,6 +11,8 @@ using MathNet.Numerics.Statistics;      //for Math
 using System.Globalization;             //for CultureInfo.InvariantCulture
 
 
+
+
 namespace TEMP102
 {
     public partial class Form1 : Form
@@ -22,6 +24,8 @@ namespace TEMP102
 
         private List<double> listdTimespent = new List<double>();
         private List<double> listdTemperature = new List<double>();
+       
+
   
 
         public Form1()
@@ -65,8 +69,10 @@ namespace TEMP102
         private void LineReceived(string line)
         {
             double dTemperature, dTemperatureRound, dTemperatureStd;
+            
+            
             //What to do with the received line here
-
+            
             try
             {
                 DateTime dtStart = DateTime.Now;
@@ -92,8 +98,9 @@ namespace TEMP102
                 label73xStd.Text = Convert.ToString(3*dTemperatureStd);
                 label9Min.Text = Convert.ToString(Math.Round(listdTemperature.Min(),4));
                 label9Max.Text = Convert.ToString(Math.Round(listdTemperature.Max(),4));
+                //label11Schiefe.Text = Convert.ToString(Math.Round(listdTemperature.(), 4));
 
-       
+            
 
                 chart1.Series[0].Points.AddXY(tsTimespent.TotalSeconds, dTemperatureRound);
                 //chart1.Series[0].Points.AddXY(i, dTemperatureRound);

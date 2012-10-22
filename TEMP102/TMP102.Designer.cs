@@ -49,6 +49,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9Min = new System.Windows.Forms.Label();
             this.label9Max = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11Schiefe = new System.Windows.Forms.Label();
+            this.label11Wolbung = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -199,7 +203,7 @@
             // label9Min
             // 
             this.label9Min.AutoSize = true;
-            this.label9Min.Location = new System.Drawing.Point(84, 265);
+            this.label9Min.Location = new System.Drawing.Point(81, 265);
             this.label9Min.Name = "label9Min";
             this.label9Min.Size = new System.Drawing.Size(24, 13);
             this.label9Min.TabIndex = 14;
@@ -214,11 +218,51 @@
             this.label9Max.TabIndex = 15;
             this.label9Max.Text = "Max";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(9, 328);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(46, 13);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Schiefe ";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(9, 354);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(53, 13);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "Wölbung ";
+            // 
+            // label11Schiefe
+            // 
+            this.label11Schiefe.AutoSize = true;
+            this.label11Schiefe.Location = new System.Drawing.Point(81, 328);
+            this.label11Schiefe.Name = "label11Schiefe";
+            this.label11Schiefe.Size = new System.Drawing.Size(43, 13);
+            this.label11Schiefe.TabIndex = 18;
+            this.label11Schiefe.Text = "Schiefe";
+            // 
+            // label11Wolbung
+            // 
+            this.label11Wolbung.AutoSize = true;
+            this.label11Wolbung.Location = new System.Drawing.Point(81, 354);
+            this.label11Wolbung.Name = "label11Wolbung";
+            this.label11Wolbung.Size = new System.Drawing.Size(53, 13);
+            this.label11Wolbung.TabIndex = 19;
+            this.label11Wolbung.Text = "Wölbung ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(963, 373);
+            this.ClientSize = new System.Drawing.Size(963, 387);
+            this.Controls.Add(this.label11Wolbung);
+            this.Controls.Add(this.label11Schiefe);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label9Max);
             this.Controls.Add(this.label9Min);
             this.Controls.Add(this.label8);
@@ -265,6 +309,10 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9Min;
         private System.Windows.Forms.Label label9Max;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11Schiefe;
+        private System.Windows.Forms.Label label11Wolbung;
     }
 }
 
