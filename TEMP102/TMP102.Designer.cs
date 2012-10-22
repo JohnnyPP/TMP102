@@ -43,6 +43,12 @@
             this.label5Mittel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6Zentral = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label73xStd = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9Min = new System.Windows.Forms.Label();
+            this.label9Max = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,16 +83,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 81);
+            this.label2.Location = new System.Drawing.Point(9, 81);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 13);
+            this.label2.Size = new System.Drawing.Size(84, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Temperatur [°C]";
+            this.label2.Text = "Temperatur [°C]:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 202);
+            this.label3.Location = new System.Drawing.Point(9, 202);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(134, 13);
             this.label3.TabIndex = 3;
@@ -95,7 +101,7 @@
             // label4Std
             // 
             this.label4Std.AutoSize = true;
-            this.label4Std.Location = new System.Drawing.Point(158, 202);
+            this.label4Std.Location = new System.Drawing.Point(160, 202);
             this.label4Std.Name = "label4Std";
             this.label4Std.Size = new System.Drawing.Size(23, 13);
             this.label4Std.TabIndex = 4;
@@ -121,11 +127,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 124);
+            this.label4.Location = new System.Drawing.Point(9, 124);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 13);
+            this.label4.Size = new System.Drawing.Size(75, 13);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Mittelwert [°C]";
+            this.label4.Text = "Mittelwert [°C]:";
             // 
             // label5Mittel
             // 
@@ -139,11 +145,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 164);
+            this.label5.Location = new System.Drawing.Point(9, 163);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 13);
+            this.label5.Size = new System.Drawing.Size(83, 13);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Zentralwert [°C]";
+            this.label5.Text = "Zentralwert [°C]:";
             // 
             // label6Zentral
             // 
@@ -154,11 +160,71 @@
             this.label6Zentral.TabIndex = 9;
             this.label6Zentral.Text = "Zentral";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(9, 236);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(145, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "3xStandard abweichung [°C]:";
+            // 
+            // label73xStd
+            // 
+            this.label73xStd.AutoSize = true;
+            this.label73xStd.Location = new System.Drawing.Point(160, 236);
+            this.label73xStd.Name = "label73xStd";
+            this.label73xStd.Size = new System.Drawing.Size(34, 13);
+            this.label73xStd.TabIndex = 11;
+            this.label73xStd.Text = "3xStd";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(9, 265);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 13);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Min [°C]:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(9, 295);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(50, 13);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Max [°C]:";
+            // 
+            // label9Min
+            // 
+            this.label9Min.AutoSize = true;
+            this.label9Min.Location = new System.Drawing.Point(84, 265);
+            this.label9Min.Name = "label9Min";
+            this.label9Min.Size = new System.Drawing.Size(24, 13);
+            this.label9Min.TabIndex = 14;
+            this.label9Min.Text = "Min";
+            // 
+            // label9Max
+            // 
+            this.label9Max.AutoSize = true;
+            this.label9Max.Location = new System.Drawing.Point(81, 295);
+            this.label9Max.Name = "label9Max";
+            this.label9Max.Size = new System.Drawing.Size(27, 13);
+            this.label9Max.TabIndex = 15;
+            this.label9Max.Text = "Max";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(963, 373);
+            this.Controls.Add(this.label9Max);
+            this.Controls.Add(this.label9Min);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label73xStd);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label6Zentral);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label5Mittel);
@@ -193,6 +259,12 @@
         private System.Windows.Forms.Label label5Mittel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6Zentral;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label73xStd;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9Min;
+        private System.Windows.Forms.Label label9Max;
     }
 }
 

@@ -64,7 +64,7 @@ namespace TEMP102
         private delegate void LineReceivedEvent(string line);
         private void LineReceived(string line)
         {
-            double dTemperature, dTemperatureRound;
+            double dTemperature, dTemperatureRound, dTemperatureStd;
             //What to do with the received line here
 
             try
@@ -85,11 +85,14 @@ namespace TEMP102
                 tsTimespent = DateTime.Now - dtStarttime;
                 listdTimespent.Add(i);
                 listdTemperature.Add(dTemperatureRound);
-                label4Std.Text = Convert.ToString(Math.Round(listdTemperature.StandardDeviation(),4));
+                dTemperatureStd = Math.Round(listdTemperature.StandardDeviation(),4);
+                label4Std.Text = Convert.ToString(dTemperatureStd);
                 label5Mittel.Text = Convert.ToString(Math.Round(listdTemperature.Mean(),4));
                 label6Zentral.Text = Convert.ToString(Math.Round(listdTemperature.Median(),4));
+                label73xStd.Text = Convert.ToString(3*dTemperatureStd);
+                label9Min.Text = Convert.ToString(Math.Round(listdTemperature.Min(),4));
+                label9Max.Text = Convert.ToString(Math.Round(listdTemperature.Max(),4));
 
-                
        
 
                 chart1.Series[0].Points.AddXY(tsTimespent.TotalSeconds, dTemperatureRound);
