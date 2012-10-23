@@ -11,8 +11,6 @@ using MathNet.Numerics.Statistics;      //for Math
 using System.Globalization;             //for CultureInfo.InvariantCulture
 
 
-
-
 namespace TEMP102
 {
     public partial class Form1 : Form
@@ -24,8 +22,14 @@ namespace TEMP102
 
         private List<double> listdTimespent = new List<double>();
         private List<double> listdTemperature = new List<double>();
-       
+        
 
+        //var hist = new Histogram();
+        //hist.AddData(1);
+
+        
+
+      
   
 
         public Form1()
@@ -69,16 +73,15 @@ namespace TEMP102
         private void LineReceived(string line)
         {
             double dTemperature, dTemperatureRound, dTemperatureStd;
-            
-            
-            //What to do with the received line here
+         
             
             try
             {
+                
                 DateTime dtStart = DateTime.Now;
 
-                //label1.Text = line;                 //receives line with point 21.45 to make it to double one needs to use
-                                                    //CultureInfo.InvariantCulture
+                //label1.Text = line;                    //receives line with point 21.45 to make it to double one needs to use
+                                                         //CultureInfo.InvariantCulture
                 dTemperature = double.Parse(line, CultureInfo.InvariantCulture);
                 dTemperatureRound = Math.Round(dTemperature, 4);
 
@@ -90,7 +93,13 @@ namespace TEMP102
 
                 tsTimespent = DateTime.Now - dtStarttime;
                 listdTimespent.Add(i);
+
                 listdTemperature.Add(dTemperatureRound);
+
+                DescriptiveStatistics descrStat = new DescriptiveStatistics(listdTemperature);
+                double dKurtosis = descrStat.Kurtosis;
+                double dSkewness = descrStat.Skewness;
+
                 dTemperatureStd = Math.Round(listdTemperature.StandardDeviation(),4);
                 label4Std.Text = Convert.ToString(dTemperatureStd);
                 label5Mittel.Text = Convert.ToString(Math.Round(listdTemperature.Mean(),4));
@@ -98,9 +107,11 @@ namespace TEMP102
                 label73xStd.Text = Convert.ToString(3*dTemperatureStd);
                 label9Min.Text = Convert.ToString(Math.Round(listdTemperature.Min(),4));
                 label9Max.Text = Convert.ToString(Math.Round(listdTemperature.Max(),4));
-                //label11Schiefe.Text = Convert.ToString(Math.Round(listdTemperature.(), 4));
+                label11Schiefe.Text = Convert.ToString(Math.Round(dSkewness, 4));
+                label11Wolbung.Text = Convert.ToString(Math.Round(dKurtosis, 4));
 
-            
+               
+
 
                 chart1.Series[0].Points.AddXY(tsTimespent.TotalSeconds, dTemperatureRound);
                 //chart1.Series[0].Points.AddXY(i, dTemperatureRound);
